@@ -1,27 +1,20 @@
-[![Build Status](https://travis-ci.org/IBM/procurement-analysis-with-wks.svg?branch=master)](https://travis-ci.org/IBM/procurement-analysis-with-wks)
-
 # Identifying correct source and destination of travel using Watson Knowledge Studio, Watson Natural Language Understanding and Watson Assistant.
 
 * Build a custom model in Watson Knowledge Studio.
 * Import that model into Watson Natural Language Understanding.
-* Invoke Watson Assistant, which internally uses NLU to identify the source and destination in user queries. Watson Assistant uses Serverless function to invoke calls in slot.
+* Invoke Watson Assistant, which internally uses NLU to identify the source and destination in user queries.
 
 ### Watson Assistant response to user query with and without NLU(custom model)
 
 ## Flow
 
-![](doc/source/images/architecture.png)
-
-1. Load type system and corpus files into Watson Knowledge Studio.
-2. A user generates a model by training and evaluating data.
-3. The WKS model is deployed to Watson Natural Language Understanding.
-4. Watson Assistant uses Natural Language Understanding to identify correct source and destination.
+![](images/architecture.png)
 
 ### How does Watson Knowledge Studio work?
 
-The image below explains the process of how Watson Knowledge Studio works in light detail. For greater detail see Steps [4. Upload Type System](#4-upload-type-system) through [9. Deploy the machine learning model to Watson Discovery](#9-deploy-the-machine-learning-model-to-discovery).
+The image below explains the process of how Watson Knowledge Studio works in light detail. For greater detail see Steps [4. Upload Type System](#4-upload-type-system) through [9. Deploy the machine learning model to Watson Natural Language Understanding](#9-deploy-the-machine-learning-model-to-nlu).
 
-![](doc/source/images/process_flow.png)
+![](images/process_flow.png)
 
 The process is as follows:
 
@@ -29,8 +22,8 @@ The process is as follows:
 * We follow human annotation process to identify entities and relationships.
 * We create a machine learning model and train the model till we are satisfied with the results.
 * The corpus document can be exported and used in a new WKS project, if required.
-* We create a Watson Discovery service from an IBM Cloud account. Note that the service has to be created under the `US South` region so that our WKS model can be used with it.
-* We create a discovery collection with a customized configuration pointing to the WKS model id.
+* We create a Watson Natural Language Understanding service from an IBM Cloud account.
+* We create Watson Assistant and use Watson Natural Language Understanding service to interpret source and destination in user query.
 
 ### Technical Architecture
 
@@ -42,8 +35,8 @@ This image shows the relationships and data flows between the major components o
 
 ## Included Components
 * [Watson Knowledge Studio](https://console.bluemix.net/catalog/services/knowledge-studio): Build custom models to teach Watson the language of your domain.
-* [Watson Discovery](https://console.bluemix.net/catalog/services/discovery): A cognitive search and content analytics engine for applications to identify patterns, trends, and actionable insights.
-* [Compose for JanusGraph](https://console.bluemix.net/catalog/services/compose-for-janusgraph): JanusGraph is a scalable graph database optimized for storing and querying highly-interconnected data modeled as millions or billions of vertices and edges
+* [Watson Natural Language Understanding](https://console.bluemix.net/catalog/services/natural-language-understanding): A cognitive search and content analytics engine for applications to identify patterns, trends, and actionable insights.
+* [Watson Assistant](https://console.bluemix.net/catalog/services/watson-assistant-formerly-conversation): With the IBM Watson Assistant service, you can build a solution that understands natural-language input and uses machine learning to respond to customers in a way that simulates a conversation between humans.
 
 # Steps
 
@@ -55,8 +48,8 @@ This image shows the relationships and data flows between the major components o
 6. [Create an Annotation Set](#6-create-an-annotation-set)
 7. [Create a Task for Human Annotation](#7-create-a-task-for-human-annotation)
 8. [Create the model](#8-create-the-model)
-9. [Deploy the machine learning model to Discovery](#9-deploy-the-machine-learning-model-to-discovery)
-10. [Create and Configure a Watson Discovery Collection](#10-create-and-configure-a-watson-discovery-collection)
+9. [Deploy the machine learning model to Natural Language Understanding](#9-deploy-the-machine-learning-model-to-nlu)
+10. [Create Watson Assistant](#)
 11. [Configure credentials](#11-configure-credentials)
 12. [Run the application](#12-run-the-application)
 13. [Deploy and run the application on IBM Cloud](#13-deploy-and-run-the-application-on-ibm-cloud)
@@ -172,7 +165,7 @@ press the **Upload Dictionary** button to import a **Dictionary** file. Use the 
 
 ![](images/Step-27-rule-model-run-success.png)
 
-## 7. Create a Task for Human Annotation
+## 12. Create a Task for Human Annotation
 
 Add a task for human annotation by creating a task and assigning it annotation sets.
 
@@ -188,7 +181,7 @@ A panel will then be displayed of the available annotation sets that can be assi
 
 
 
-### 7.1 Start the Human Annotation task
+### 12.1 Start the Human Annotation task
 
 Click on the task card to view the task details panel.
 
@@ -200,7 +193,7 @@ If you select any of the documents in the list, the **Document Annotation** pane
 
 ![](images/wks/editor-of-mentions.png)
 
-### 7.2 Submit Annotation Set
+### 12.2 Submit Annotation Set
 
 From the **Task** details panel, press the **Submit All Documents** button.
 
@@ -230,7 +223,7 @@ Select your **Annotation Set Name** and then press the **Accept** button. This s
 
 ![](images/Step-38-task-status-completed.png)
 
-## 8. Create the model
+## 13. Create the model
 
 Go to the **Model Management -> Performance** panel, and press the **Train and evaluate** button.
 
@@ -248,23 +241,23 @@ Once complete, you will see the results of the train and evaluate process.
 
 ![](Step-42-model-train-and-evaluate-complete.png)
 
-## 9. Deploy the machine learning model to Discovery
+## 14. Deploy the machine learning model to Natural Language Understanding
 
-Now we can deploy our new model to the already created **Discovery** service. Navigate to the **Versions** menu on the left and press **Take Snapshot**.
+Now we can deploy our new model to the already created **Natural Language Understanding** service. Navigate to the **Versions** menu on the left and press **Take Snapshot**.
 
 ![](images/Step-43-version-page.png)
 
-The snapshot version will now be available for deployment to Discovery.
+The snapshot version will now be available for deployment to Natural Language Understanding.
 
 ![](images/Step-44-take-snapshot.png)
 
 To start the process, click the **Deploy** button associated with your snapshot version.
 
-Select the option to deploy to **Discovery**.
+Select the option to deploy to **Natural Language Understanding**.
 
 ![](images/Step-45-deploy-model-to-nlu.png)
 
-Then enter your IBM Cloud account information to locate your **Discovery** service to deploy to.
+Then enter your IBM Cloud account information to locate your **Natural Language Understanding** service to deploy to.
 
 ![](images/Step-45-deploy-model-to-nlu-instance.png)
 
@@ -276,13 +269,13 @@ Once deployed, a **Model ID** will be created. Keep note of this value as it wil
 
 
 
-## 12. Run the application
+## 15. Run the application
 
 1. Install [Node.js](https://nodejs.org/en/) runtime or NPM.
 1. Start the app by running `npm install`, followed by `npm start`.
 1. Access the UI by pointing your browser at the host and port values returned by the `npm start` command. For example, `http://localhost:6003`.
 
-## 13. Deploy and run the application on IBM Cloud
+## 16. Deploy and run the application on IBM Cloud
 
 To deploy to the IBM Cloud, make sure you have the [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started) tool installed.
 
@@ -294,7 +287,7 @@ To deploy to the IBM Cloud, make sure you have the [IBM Cloud CLI](https://conso
 
 # Links
 * [Watson Knowledge Studio](https://www.ibm.com/watson/services/knowledge-studio/)
-* [Watson Discovery](https://www.ibm.com/watson/services/natural-language-understading/)
+* [Watson Natural Language Understanding](https://www.ibm.com/watson/services/natural-language-understading/)
 
 # Learn more
 
