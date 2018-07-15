@@ -47,13 +47,13 @@ This image shows the relationships and data flows between the major components o
 5. [Import Corpus Documents](#5-import-corpus-documents)
 6. [Create an Annotation Set](#6-create-an-annotation-set)
 7. [Build Dictionary](#7-build-dictionary)
-8. [Create class for Dictionary and map to Dictionary created for Location Entity](#8-create-a-dictionary)
-9. [Build Rule for identity patterns for Source and Destination](#9-build-rule)
-10. [Map Entity to Class for creating Rule Model](#10-map-entity-to-class)
-11. [Create Rule Model and Run for annotation set](#11-create-rule-model)
+8. [Create class for Dictionary and map to Dictionary created for Location Entity](#8-create-class-for-Dictionary-and-map-to-dictionary -created-for-location-entity)
+9. [Build Rule for identity patterns for Source and Destination](#9-build-rule-for-identity-patterns-for-source-and-destination)
+10. [Map Entity to Class for creating Rule Model](#10-map-entity-to-class-for-creating-rule-model)
+11. [Create Rule Model and Run for annotation set](#11-create-rule-model-and-run-for-annotation-set)
 12. [Create a Task for Human Annotation](#12-create-a-task-for-human-annotation)
 13. [Create the model](#13-create-the-model)
-14. [Deploy the machine learning model to Natural Language Understanding](#14-deploy-the-machine-learning-model-to-nlu)
+14. [Deploy the machine learning model to NLU](#14-deploy-the-machine-learning-model-to-nlu)
 15. [Run the application](#15-run-the-application)
 16. [Deploy and run the application on IBM Cloud](#16-deploy-and-run-the-application-on-ibm-cloud)
 
@@ -244,7 +244,7 @@ Once complete, you will see the results of the train and evaluate process.
 
 ![](Step-42-model-train-and-evaluate-complete.png)
 
-## 14. Deploy the machine learning model to Natural Language Understanding
+## 14. Deploy the machine learning model to NLU
 
 Now we can deploy our new model to the already created **Natural Language Understanding** service. Navigate to the **Versions** menu on the left and press **Take Snapshot**.
 
