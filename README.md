@@ -12,7 +12,7 @@
 
 ### How does Watson Knowledge Studio work?
 
-The image below explains the process of how Watson Knowledge Studio works in light detail. For greater detail see Steps [4. Upload Type System](#4-upload-type-system) through [9. Deploy the machine learning model to Watson Natural Language Understanding](#9-deploy-the-machine-learning-model-to-nlu).
+The image below explains the process of how Watson Knowledge Studio works in light detail. For greater detail see Steps [4. Upload Type System](#4-upload-type-system) through [9. Deploy the machine learning model to Watson Natural Language Understanding](#Step-45-deploy-model-to-nlu-instance).
 
 ![](images/process_flow.png)
 
