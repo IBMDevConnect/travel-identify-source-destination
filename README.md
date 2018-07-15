@@ -46,13 +46,16 @@ This image shows the relationships and data flows between the major components o
 4. [Upload Type System](#4-upload-type-system)
 5. [Import Corpus Documents](#5-import-corpus-documents)
 6. [Create an Annotation Set](#6-create-an-annotation-set)
-7. [Create a Task for Human Annotation](#7-create-a-task-for-human-annotation)
-8. [Create the model](#8-create-the-model)
-9. [Deploy the machine learning model to Natural Language Understanding](#9-deploy-the-machine-learning-model-to-nlu)
-10. [Create Watson Assistant](#)
-11. [Configure credentials](#11-configure-credentials)
-12. [Run the application](#12-run-the-application)
-13. [Deploy and run the application on IBM Cloud](#13-deploy-and-run-the-application-on-ibm-cloud)
+7. [Build Dictionary](#5-build-dictionary)
+8. [Create class for Dictionary and map to Dictionary created for Location Entity](#8-create-a-dictionary)
+9. [Build Rule for identity patterns for Source and Destination](#5-build-rule)
+10. [Map Entity to Class for creating Rule Model](#6-map-entity-to-class)
+11. [Create Rule Model and Run for annotation set](#6-create-rule-model)
+12. [Create a Task for Human Annotation](#7-create-a-task-for-human-annotation)
+13. [Create the model](#8-create-the-model)
+14. [Deploy the machine learning model to Natural Language Understanding](#9-deploy-the-machine-learning-model-to-nlu)
+15. [Run the application](#12-run-the-application)
+16. [Deploy and run the application on IBM Cloud](#13-deploy-and-run-the-application-on-ibm-cloud)
 
 ## 1. Clone the repo
 
