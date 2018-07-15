@@ -47,7 +47,7 @@ This image shows the relationships and data flows between the major components o
 5. [Import Corpus Documents](#5-import-corpus-documents)
 6. [Create an Annotation Set](#6-create-an-annotation-set)
 7. [Build Dictionary](#7-build-dictionary)
-8. [Create class for Dictionary and map to Dictionary created for Location Entity](#8-create-class-for-Dictionary-and-map-to-dictionary -created-for-location-entity)
+8. [Create class for Dictionary and map to Dictionary created for Location Entity](#8-create-class-for-Dictionary-and-map-to-dictionary-created-for-location-entity)
 9. [Build Rule for identity patterns for Source and Destination](#9-build-rule-for-identity-patterns-for-source-and-destination)
 10. [Map Entity to Class for creating Rule Model](#10-map-entity-to-class-for-creating-rule-model)
 11. [Create Rule Model and Run for annotation set](#11-create-rule-model-and-run-for-annotation-set)
