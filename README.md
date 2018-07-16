@@ -274,56 +274,69 @@ Once deployed, a **Model ID** will be created. Keep note of this value as it wil
 ## 15. Configure IBM Cloud Functions (Serverless)
 
 Click the Hamburger to open the menu
+
 ![](images/1-screenshot.png)
 
 
 Select Functions from menu
+
 ![](images/2-screenshot.png)
 
 
 Take note of Current Namespace and API Key (required in later steps)
+
 ![](images/3-screenshot.png)
 
 
 Click on Overview from the left side tab and Click START CREATING button
+
 ![](images/4-screenshot.png)
 
 
 Select Create Action
+
 ![](images/5-screenshot.png)
 
 
 Enter Action Name(copy Action Name in Notepad-required in later steps) and click Create
+
 ![](images/6-screenshot.png)
 
 
 Copy paste the code from [ibm_cloud_functions_code.txt](https://github.com/IBMDevConnect/travel-identify-source-destination/blob/master/ibm_cloud_functions_code) and click on Save
+
 ![](images/7-screenshot.png)
 
 
 ## 16. Configure Watson Assistant
 
 Navigate to Catalog > AI > Watson Assistant
+
 ![](images/8-screenshot.png)
 
 
 Create Watson Assistant Service
+
 ![](images/9-screenshot.png)
 
 
 Launch Tool
+
 ![](images/10-screenshot.png)
 
 
 Import Workspace by clicking on Upload icon
+
 ![](images/11-screenshot.png)
 
 
 Choose JSON file [workspace-dc5ee9e6-a979-4cd4-a548-520252772a61.json](https://github.com/IBMDevConnect/travel-identify-source-destination/tree/master/watson-assistant-workspace) from the folder and click on Import
+
 ![](images/12-screenshot.png)
 
 
 Within Dialog Tab, click on book flight that has country/state mentioned node
+
 ![](images/13-screenshot.png)
 
 
@@ -331,6 +344,7 @@ Within JSON Editor, update IBM Cloud Functions username, password, namespace and
 NOTE: From the API Key-The segment before the colon (:) is your IBM Cloud Functions Username & segment after the colon is your IBM Cloud Functions Password
 
 Also, update Natural Language Understanding service username,password and Model ID
+
 ![](images/14-screenshot.png)
 
 
