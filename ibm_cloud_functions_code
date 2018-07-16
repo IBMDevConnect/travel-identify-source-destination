@@ -1,0 +1,28 @@
+function main(params) {
+const NaturalLanguageUnderstandingV1 = require('watson-developer-cloud/natural-language-understanding/v1.js');
+  return new Promise(function (resolve, reject) {
+    
+var natural_language_understanding = new NaturalLanguageUnderstandingV1({
+        'username': params.username,
+        'password': params.password,
+        'version': '2017-02-27'
+      });
+    
+    var parameters = {
+    'text': params.input,
+    'features': {
+    'entities': {
+      'model': params.modelid,
+      'limit': 2
+                }
+            }
+        }; 
+      natural_language_understanding.analyze(parameters, function(err, response) {
+        if (err) {
+          return reject(err);
+        }
+       return resolve(response);
+      }); 
+    
+  });
+}
