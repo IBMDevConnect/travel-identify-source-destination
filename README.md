@@ -9,7 +9,6 @@
 ## Technical Architecture
 
 ![](images/architecture.png)
-## This has to be changed to integrate Watson Assistant
 
 ### How does Watson Knowledge Studio work?
 
@@ -346,6 +345,8 @@ Also, update Natural Language Understanding service username,password and Model 
 
 
 ## Sample Output
+
+You can test it out in Try it Out panel of Watson Assistant!
 
 ![](images/sample-output.png)
 
