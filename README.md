@@ -48,7 +48,7 @@ The process is as follows:
 12. [Create a Task for Human Annotation](#12-create-a-task-for-human-annotation)
 13. [Create the model](#13-create-the-model)
 14. [Deploy the machine learning model to NLU](#14-deploy-the-machine-learning-model-to-nlu)
-15. [Configure IBM Cloud Functions (Serverless)](#15-configure-ibm-cloud-functions-(serverless))
+15. [Configure IBM Cloud Functions (Serverless)](#15-configure-ibm-cloud-functions-serverless)
 16. [Configure Watson Assistant](#16-configure-watson-assistant)
 17. [Run the application](#17-run-the-application)
 18. [Deploy and run the application on IBM Cloud](#18-deploy-and-run-the-application-on-ibm-cloud)
