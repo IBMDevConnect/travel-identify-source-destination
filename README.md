@@ -297,7 +297,7 @@ Enter Action Name(copy Action Name in Notepad-required in later steps) and click
 ![](images/6-screenshot.png)
 
 
-Copy paste the code from ibm_cloud_functions_code.txt and click on Save
+Copy paste the code from [ibm_cloud_functions_code.txt](https://github.com/IBMDevConnect/travel-identify-source-destination/blob/master/ibm_cloud_functions_code) and click on Save
 ![](images/7-screenshot.png)
 
 
@@ -319,7 +319,7 @@ Import Workspace by clicking on Upload icon
 ![](images/11-screenshot.png)
 
 
-Choose JSON file workspace-dc5ee9e6-a979-4cd4-a548-520252772a61.json from the folder and click on Import
+Choose JSON file [workspace-dc5ee9e6-a979-4cd4-a548-520252772a61.json](https://github.com/IBMDevConnect/travel-identify-source-destination/tree/master/watson-assistant-workspace) from the folder and click on Import
 ![](images/12-screenshot.png)
 
 
