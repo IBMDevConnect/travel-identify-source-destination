@@ -271,14 +271,80 @@ Once deployed, a **Model ID** will be created. Keep note of this value as it wil
 > NOTE: You can also view this **Model ID** by pressing the **WDS** button listed with your snapshot version.
 
 
+## 15. Configure IBM Cloud Functions (Serverless)
 
-## 15. Run the application
+Click the Hamburger to open the menu
+![](images/1-screenshot.png)
+
+
+Select Functions from menu
+![](images/2-screenshot.png)
+
+
+Take note of Current Namespace and API Key (required in later steps)
+![](images/3-screenshot.png)
+
+
+Click on Overview from the left side tab and Click START CREATING button
+![](images/4-screenshot.png)
+
+
+Select Create Action
+![](images/5-screenshot.png)
+
+
+Enter Action Name(copy Action Name in Notepad-required in later steps) and click Create
+![](images/6-screenshot.png)
+
+
+Copy paste the code from ibm_cloud_functions_code.txt and click on Save
+![](images/7-screenshot.png)
+
+
+## 16. Configure Watson Assistant
+
+Navigate to Catalog > AI > Watson Assistant
+![](images/8-screenshot.png)
+
+
+Create Watson Assistant Service
+![](images/9-screenshot.png)
+
+
+Launch Tool
+![](images/10-screenshot.png)
+
+
+Import Workspace by clicking on Upload icon
+![](images/11-screenshot.png)
+
+
+Choose JSON file workspace-dc5ee9e6-a979-4cd4-a548-520252772a61.json from the folder and click on Import
+![](images/12-screenshot.png)
+
+
+Within Dialog Tab, click on book flight that has country/state mentioned node
+![](images/13-screenshot.png)
+
+
+Within JSON Editor, update IBM Cloud Functions username, password, namespace and action name (credentials which was saved earlier ) 
+NOTE: From the API Key-The segment before the colon (:) is your IBM Cloud Functions Username & segment after the colon is your IBM Cloud Functions Password
+
+Also, update Natural Language Understanding service username,password and Model ID
+![](images/14-screenshot.png)
+
+
+## Sample Output
+
+![](images/sample-output.png)
+
+## Run the application
 
 1. Install [Node.js](https://nodejs.org/en/) runtime or NPM.
 1. Start the app by running `npm install`, followed by `npm start`.
 1. Access the UI by pointing your browser at the host and port values returned by the `npm start` command. For example, `http://localhost:6003`.
 
-## 16. Deploy and run the application on IBM Cloud
+## Deploy and run the application on IBM Cloud
 
 To deploy to the IBM Cloud, make sure you have the [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started) tool installed.
 
