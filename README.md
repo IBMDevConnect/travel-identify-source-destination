@@ -13,7 +13,7 @@
 
 ### How does Watson Knowledge Studio work?
 
-The image below explains the process of how Watson Knowledge Studio works in light detail. For greater detail see Steps [4. Upload Type System](#4-upload-type-system) through [9. Deploy the machine learning model to Watson Natural Language Understanding](#Step-45-deploy-model-to-nlu-instance).
+The image below explains the process of how Watson Knowledge Studio works in light detail. For greater detail see Steps [4. Upload Type System](#4-upload-type-system) through [14. Deploy the machine learning model to NLU](#14-deploy-the-machine-learning-model-to-nlu).
 
 ![](images/process_flow.png)
 
@@ -31,6 +31,7 @@ The process is as follows:
 * [Watson Knowledge Studio](https://console.bluemix.net/catalog/services/knowledge-studio): Build custom models to teach Watson the language of your domain.
 * [Watson Natural Language Understanding](https://console.bluemix.net/catalog/services/natural-language-understanding): A cognitive search and content analytics engine for applications to identify patterns, trends, and actionable insights.
 * [Watson Assistant](https://console.bluemix.net/catalog/services/watson-assistant-formerly-conversation): With the IBM Watson Assistant service, you can build a solution that understands natural-language input and uses machine learning to respond to customers in a way that simulates a conversation between humans.
+* [IBM Cloud Functions](https://console.bluemix.net/openwhisk): IBM Cloud Functions (based on Apache OpenWhisk) is a Function-as-a-Service (FaaS) platform which executes functions in response to incoming events and costs nothing when not in use.
 
 # Steps
 
