@@ -6,9 +6,10 @@
 
 ### Watson Assistant response to user query with and without NLU(custom model)
 
-## Flow
+## Technical Architecture
 
 ![](images/architecture.png)
+## This has to be changed to integrate Watson Assistant
 
 ### How does Watson Knowledge Studio work?
 
@@ -18,20 +19,13 @@ The image below explains the process of how Watson Knowledge Studio works in lig
 
 The process is as follows:
 
+* We create a Watson Natural Language Understanding service from an IBM Cloud account.
 * We build a Type System specific to the business domain/use case.
 * We follow human annotation process to identify entities and relationships.
 * We create a machine learning model and train the model till we are satisfied with the results.
 * The corpus document can be exported and used in a new WKS project, if required.
-* We create a Watson Natural Language Understanding service from an IBM Cloud account.
+* Deploy the custom model built in knowledge studio to Natural Language Understanding service.
 * We create Watson Assistant and use Watson Natural Language Understanding service to interpret source and destination in user query.
-
-### Technical Architecture
-
-This image shows the relationships and data flows between the major components of this Code Pattern:
-
-> Note: In the image below, NLU is synonomous with Discovery. Either can be used to extract entities and relationships from data sources (both structured and unstructured).
-
-![](doc/source/images/tech-architecture-1.png)
 
 ## Included Components
 * [Watson Knowledge Studio](https://console.bluemix.net/catalog/services/knowledge-studio): Build custom models to teach Watson the language of your domain.
@@ -83,7 +77,7 @@ A type system allows us to define things that are specific to our procurement da
 
 To upload our pre-defined type system, from the **Access & Tools -> Entity Types** panel, press the **Upload** button to import the **Type System** file  [data/types-f64bfc90-5e5b-11e8-9a75-776d8b751f49.json](data/types-f64bfc90-5e5b-11e8-9a75-776d8b751f49.json) found in the local repository.
 
-![](doc/source/images/Step-2-entity-type-system-landing-page.png)
+![](images/Step-2-entity-type-system-landing-page.png)
 
 This will upload a set of **Entity Types**.
 
@@ -164,7 +158,7 @@ press the **Upload Dictionary** button to import a **Dictionary** file. Use the 
 
 ![](images/Step-25-rule-model-create.png)
 
-![](images/Step-26-rule-model-run-temp.png)
+![](images/Step-26-rule-model-run.png)
 
 ![](images/Step-27-rule-model-run-success.png)
 
@@ -266,7 +260,7 @@ Then enter your IBM Cloud account information to locate your **Natural Language 
 
 Once deployed, a **Model ID** will be created. Keep note of this value as it will be required later in this Code Pattern.
 
-![](doc/source/images/wks/model-id.png)
+![](images/Step-45-deploy-model-capture-model-id.png)
 
 > NOTE: You can also view this **Model ID** by pressing the **WDS** button listed with your snapshot version.
 
@@ -340,7 +334,7 @@ Within Dialog Tab, click on book flight that has country/state mentioned node
 ![](images/13-screenshot.png)
 
 
-Within JSON Editor, update IBM Cloud Functions username, password, namespace and action name (credentials which was saved earlier ) 
+Within JSON Editor, update IBM Cloud Functions username, password, namespace and action name (credentials which was saved earlier )
 NOTE: From the API Key-The segment before the colon (:) is your IBM Cloud Functions Username & segment after the colon is your IBM Cloud Functions Password
 
 Also, update Natural Language Understanding service username,password and Model ID
@@ -371,6 +365,8 @@ To deploy to the IBM Cloud, make sure you have the [IBM Cloud CLI](https://conso
 # Links
 * [Watson Knowledge Studio](https://www.ibm.com/watson/services/knowledge-studio/)
 * [Watson Natural Language Understanding](https://www.ibm.com/watson/services/natural-language-understading/)
+* [Watson Assistant](https://www.ibm.com/watson/services/conversation/)
+* [IBM Cloud Functions](https://www.ibm.com/cloud/functions)
 
 # Learn more
 
