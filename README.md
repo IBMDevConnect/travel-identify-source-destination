@@ -48,8 +48,10 @@ The process is as follows:
 12. [Create a Task for Human Annotation](#12-create-a-task-for-human-annotation)
 13. [Create the model](#13-create-the-model)
 14. [Deploy the machine learning model to NLU](#14-deploy-the-machine-learning-model-to-nlu)
-15. [Run the application](#15-run-the-application)
-16. [Deploy and run the application on IBM Cloud](#16-deploy-and-run-the-application-on-ibm-cloud)
+15. [Configure IBM Cloud Functions (Serverless)](#15-configure-ibm-cloud-functions-(serverless))
+16. [Configure Watson Assistant](#16-configure-watson-assistant)
+17. [Run the application](#17-run-the-application)
+18. [Deploy and run the application on IBM Cloud](#18-deploy-and-run-the-application-on-ibm-cloud)
 
 ## 1. Clone the repo
 
@@ -346,13 +348,13 @@ Also, update Natural Language Understanding service username,password and Model 
 
 ![](images/sample-output.png)
 
-## Run the application
+## 17. Run the application
 
 1. Install [Node.js](https://nodejs.org/en/) runtime or NPM.
 1. Start the app by running `npm install`, followed by `npm start`.
 1. Access the UI by pointing your browser at the host and port values returned by the `npm start` command. For example, `http://localhost:6003`.
 
-## Deploy and run the application on IBM Cloud
+## 18. Deploy and run the application on IBM Cloud
 
 To deploy to the IBM Cloud, make sure you have the [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started) tool installed.
 
