@@ -122,7 +122,7 @@ press the **Upload Dictionary** button to import a **Dictionary** file. Use the 
 
 ![](images/Step-12-dictionary-entries.png)
 
-## 8. Create class for **Dictionary** and map to **Dictionary** created for **Location Entity**.
+## 8. Create class for **Dictionary** and map it to **Dictionary** created for **Location Entity**.
 
 ![](images/Step-13-create-dictonary-class.png)
 
