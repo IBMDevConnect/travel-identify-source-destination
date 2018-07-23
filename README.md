@@ -1,5 +1,7 @@
 # Identifying correct source and destination of travel using Watson Knowledge Studio, Watson Natural Language Understanding and Watson Assistant.
 
+Contributors: Rajesh Gudikoti & Riya Mary Roy
+
 * Build a custom model in Watson Knowledge Studio.
 * Import that model into Watson Natural Language Understanding.
 * Invoke Watson Assistant, which internally uses NLU to identify the source and destination in user queries.
