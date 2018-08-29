@@ -1,22 +1,14 @@
-# Identifying correct source and destination of travel using Watson Knowledge Studio, Watson Natural Language Understanding and Watson Assistant.
-
-Contributors: Rajesh Gudikoti & Riya Mary Roy
-
-* Build a custom model in Watson Knowledge Studio.
-* Import that model into Watson Natural Language Understanding.
-* Invoke Watson Assistant, which internally uses NLU to identify the source and destination in user queries.
-
-### Watson Assistant response to user query with and without NLU(custom model)
-
-## Technical Architecture
-
-![](images/architecture.png)
+# Identifying correct source and destination of travel using Watson Natural Language Understanding, Cloud Functions and Watson Assistant.
 
 The process is as follows:
 
 * We create a Watson Natural Language Understanding service from an IBM Cloud account.
 * Create Cloud Functions to extract source and destination in user query.
 * We create Watson Assistant and invokes Cloud Functions.
+
+## Technical Architecture
+
+![](images/architecture.png)
 
 ## Included Components
 * [Watson Natural Language Understanding](https://console.bluemix.net/catalog/services/natural-language-understanding): A cognitive search and content analytics engine for applications to identify patterns, trends, and actionable insights.
@@ -136,3 +128,5 @@ You can test it out in Try it Out panel of Watson Assistant!
 # License
 
 [Apache 2.0](LICENSE)
+
+Contributors: Rajesh Gudikoti & Riya Mary Roy
