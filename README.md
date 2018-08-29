@@ -27,7 +27,7 @@ The process is as follows:
 
 1. [Clone the repo](#1-clone-the-repo)
 2. [Create IBM Cloud services](#2-create-ibm-cloud-services)
-3. [Create Watson Natural Language Understanding (NLU)](#)
+3. [Create Watson Natural Language Understanding (NLU)](#3-create-watson-natural-language-understanding-nlu)
 4. [Configure IBM Cloud Functions (Serverless)](#4-configure-ibm-cloud-functions-serverless)
 5. [Configure Watson Assistant](#5-configure-watson-assistant)
 
