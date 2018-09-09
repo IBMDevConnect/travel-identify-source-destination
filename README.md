@@ -1,14 +1,10 @@
-# Identifying correct source and destination of travel using Watson Natural Language Understanding, Cloud Functions and Watson Assistant.
+# Identifying accurate source and destination location using Watson Natural Language Understanding, Cloud Functions and Watson Assistant.
 
 The process is as follows:
 
-* We create a Watson Natural Language Understanding service from an IBM Cloud account.
+* Create Watson Natural Language Understanding service in IBM Cloud.
 * Create Cloud Functions to extract source and destination in user query.
-* We create Watson Assistant and invokes Cloud Functions.
-
-## Technical Architecture
-
-![](images/architecture.png)
+* Create Watson Assistant and invoke NLU API using IBM Cloud Functions.
 
 ## Included Components
 * [Watson Natural Language Understanding](https://console.bluemix.net/catalog/services/natural-language-understanding): A cognitive search and content analytics engine for applications to identify patterns, trends, and actionable insights.
@@ -29,7 +25,7 @@ The process is as follows:
 git clone https://github.com/IBMDevConnect/travel-identify-source-destination
 ```
 
-## 2. Create IBM Cloud account (Ignore this step if you have account)
+## 2. Create IBM Cloud account (Ignore this step if you have an account)
 
 https://console.ng.bluemix.net/registration/
 
@@ -129,4 +125,6 @@ You can test it out in Try it Out panel of Watson Assistant!
 
 [Apache 2.0](LICENSE)
 
-Contributors: Rajesh Gudikoti & Riya Mary Roy
+# Contributors
+
+Rajesh Gudikoti & Riya Mary Roy
